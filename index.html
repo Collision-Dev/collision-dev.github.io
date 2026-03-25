@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Collision Interactive — mobile games with impact. Fast, dynamic gameplay built for performance." />
+  <title>Collision Interactive — Mobile Games With Impact</title>
+  <link rel="icon" type="image/png" href="assets/logo2.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="bg-rays" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="site-header__inner">
+      <a class="brand" href="#top">
+        <img class="brand__logo" src="assets/logo2.png" width="48" height="48" alt="Collision Interactive logo" />
+        <div class="brand__text">
+          <span class="brand__name">Collision Interactive</span>
+          <span class="brand__tagline">Where ideas collide into worlds</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#games">Our Games</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile" hidden>
+      <a href="#games">Our Games</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero__ambient" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">Mobile Games With Impact</h1>
+          <p class="hero__subtitle">We create fast, dynamic mobile games focused on gameplay and performance.</p>
+        </div>
+        <a class="btn btn--primary btn--particles" href="#games">Our Games</a>
+      </div>
+    </section>
+
+    <section class="section section--games" id="games">
+      <div class="section__head reveal" data-reveal>
+        <h2 class="section__title">Our Games</h2>
+        <p class="section__lead">Released titles from the studio — with more in the pipeline.</p>
+      </div>
+      <div class="games-showcase">
+        <div class="games-grid" role="list">
+          <article class="game-card reveal card-particles" data-reveal role="listitem">
+            <div class="game-card__image game-card__image--keyart">
+              <img
+                class="game-card__keyart"
+                src="assets/alien-waves-keyart.png"
+                width="682"
+                height="1024"
+                alt="Alien Waves — soldier in blue armor against an alien swarm"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Alien Waves</h3>
+              <p class="game-card__desc">Fight waves of alien enemies in a fast-paced top-down shooter. Upgrade your build, survive longer, and dominate the battlefield.</p>
+              <a
+                class="game-card__store"
+                href="https://play.google.com/store/apps/details?id=com.collint.alienwaves"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Play on Google Play</a>
+            </div>
+          </article>
+        </div>
+        <p class="games-soon" role="note">More games coming soon</p>
+      </div>
+    </section>
+
+    <section class="section section--about" id="about">
+      <div class="about-simple reveal" data-reveal>
+        <h2 class="section__title">About Us</h2>
+        <p>Collision Interactive is a mobile game development studio focused on creating fast, responsive and fun gameplay experiences.</p>
+        <p>We care about performance, smooth controls and satisfying game feel.</p>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contact">
+      <div class="section__head reveal" data-reveal>
+        <h2 class="section__title">Contact</h2>
+        <p class="section__lead">Partnerships, press, or just saying hello — we read everything.</p>
+      </div>
+      <div class="contact-grid reveal" data-reveal>
+        <div class="contact-aside">
+          <p><a class="contact-email" href="mailto:info@coll-int.net">info@coll-int.net</a></p>
+        </div>
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/info@coll-int.net" method="POST">
+          <input type="hidden" name="_subject" value="Collision Interactive — Website contact" />
+          <input type="text" name="_honey" class="contact-form__hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <label class="field">
+            <span class="field__label">Name</span>
+            <input class="field__input" type="text" name="name" autocomplete="name" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input class="field__input" type="email" name="email" autocomplete="email" required />
+          </label>
+          <label class="field">
+            <span class="field__label">Message</span>
+            <textarea class="field__input field__input--area" name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--submit btn--particles">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__tagline">Collision Interactive — high-impact gameplay, engineered for performance.</p>
+      <div class="site-footer__meta">
+        <span>© 2026 Collision Interactive</span>
+        <span class="site-footer__links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/hero-canvas.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
